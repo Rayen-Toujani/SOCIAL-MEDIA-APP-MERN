@@ -11,6 +11,7 @@ import { fileURLToPath } from "url";
 import authRoutes from "./routes.auth.js"
 import { error } from "console";
 import { register } from "./controllers/auth.js";
+import { verifyToken } from "./middleware/auth.js";
 
 
 const __filename = fileURLToPath(import.meta.url);
