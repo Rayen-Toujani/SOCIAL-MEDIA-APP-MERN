@@ -12,6 +12,7 @@ import authRoutes from "./routes.auth.js"
 import { error } from "console";
 import { register } from "./controllers/auth.js";
 import { verifyToken } from "./middleware/auth.js";
+import userRoutes from "./routes.users.js";
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -42,6 +43,7 @@ app.post("/auth/register",upload.single("picture"),register);
 //routes
 
 app.use("/auth",authRoutes);
+app.use("/users",userRoutes);
 
 
 const PORT = process.env.PORT ||6001;
